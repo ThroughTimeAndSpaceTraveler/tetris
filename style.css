@@ -74,7 +74,12 @@ scroll-behavior: auto;
 }
 
 body {
-    background-color: orange;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    color: #fff;
 }
 
 /* the game */
@@ -82,19 +87,24 @@ body {
 
 .container {
     display: flex;
+    padding-bottom: 2em;
+    border: solid red;
 }
 
 .grid {
-    width: 200px;
-    height: 400px;
-    background-color: #8e8e8e;
+    width: 205px;
+    height: 405px;
+    background-color: lemonchiffon;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 10px;
+    border: solid yellow;
 }
 
 .grid div {
     height: 20px;
     width: 20px;
+    border-radius: 5px;
 }
 
 .tetromino {
@@ -102,23 +112,64 @@ body {
 }
 
 
-.mini-grid {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #8e8e8e;
-    margin-left: 50px;
+.info {
+    margin-left: 40px;
+}
 
+.mini-grid {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    background-color: #fff;
 }
 
 .mini-grid div {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
 
+
+.score {
+    width: 100px;
+}
+
+.start-btn {
+    background-color: ;
+    border-radius: 5px;
+    border: none;
+}
+
+.mobile-controls {
+    display: none;
 }
 
 
 
+@media screen and (max-width: 800px) {
+    .mobile-controls {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border: solid blue;
+        color: #000;
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+    }
 
+    .flex-controls {
+        display: flex;
+        border: solid yellow;
+        justify-content: center;
+    }
 
+    .key {
+        border: solid red;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+    }
+}
