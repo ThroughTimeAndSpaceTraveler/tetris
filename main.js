@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'blue'
     ]
 
+
     // drawing tetrominoes
     const lTetromino = [
         [1, width+1, width*2+1, 2],
@@ -97,8 +98,6 @@ function undraw() {
         }
     }
     document.addEventListener('keyup', control)
-
-
 
 
 // function to move tetromino
@@ -206,6 +205,14 @@ function undraw() {
         }
     })
 
+    // mobile controls
+    const up = document.querySelector('.up').addEventListener('click', () => rotate())
+
+    const left = document.querySelector('.left').addEventListener('click', () => moveLeft())
+
+    const right = document.querySelector('.right').addEventListener('click', () => moveRight())
+
+    const down = document.querySelector('.down').addEventListener('click', () => moveDown())
 
     // score
     function addScore() {

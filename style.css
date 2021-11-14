@@ -88,7 +88,6 @@ body {
 .container {
     display: flex;
     padding-bottom: 2em;
-    border: solid red;
 }
 
 .grid {
@@ -143,33 +142,16 @@ body {
 }
 
 .mobile-controls {
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
+.key {
+    width: 60px;
+    height: 60px;
+}
 
-
-@media screen and (max-width: 800px) {
-    .mobile-controls {
-        display: flex;
-        flex-direction: column;
-        background-color: #fff;
-        border: solid blue;
-        color: #000;
-        margin: 0 auto;
-        width: 300px;
-        padding: 1em;
-    }
-
-    .flex-controls {
-        display: flex;
-        border: solid yellow;
-        justify-content: center;
-    }
-
-    .key {
-        border: solid red;
-        width: 40px;
-        height: 40px;
-        margin: 0 auto;
-    }
+.up {
+    margin: 0 auto;
+    margin-bottom: .5em;
 }
